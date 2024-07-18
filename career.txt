@@ -1,0 +1,116 @@
+~~TRY HACK ME~~
+
+05/05/22
+
+Networking concepts
+
+	task 2:976746220
+
+.1st network ::ARPANET-1960
+.World Wide Web(WWW) creator is tim berners-lee :: 1989
+.the Internet is made up of many small networks all joined together.
+.These small networks are called private networks, where networks connecting 
+ these small networks are called public networks -- or the Internet!
+ So, to recap, a network can be one of two types:
+       1)A private network
+       2)A public network
+.IP address is a set of numbers that are divided into four octets. The value 
+  of each octet will summarise to be the IP address of the device on the network.
+.A public address is used to identify the device on the Internet, whereas a 
+  private address is used to identify a device amongst other devices.
+.Any data sent to the Internet from either of any devices will be identified by 
+ the same public IP address. Public IP addresses are given by your Internet Service Provider (or ISP).
+.As more and more devices become connected, it is becoming increasingly harder to get a public address
+ that isn't already in use.
+.IPv4 , which uses a numbering system of 2^32 IP addresses (4.29 billion)
+.IPv6 , Supports up to 2^128 of IP addresses (340 trillion-plus), resolving the issues faced with IPv4
+	, More efficient due to new methodologies
+
+.MAC Adresses
+	.Devices on a network will all have a physical network interface, which is a microchip board found
+	on the device's motherboard. This network interface is assigned a unique address at the factory it 
+	was built at, called a MAC (Media Access Control ) address. The MAC address is a twelve-character 
+	hexadecimal number (a base sixteen numbering system used in computing to represent numbers) split 
+	into two's and separated by a colon. These colons are considered separators.
+	For example, a4:c3:f0:85:ac:2d. The first six characters represent the company that made the network
+	interface, and the last six is a unique number.
+
+.PING or ICMP(packet internet grouping )
+	.Ping is one of the most fundamental network tools available to us. Ping uses ICMP (Internet Control Message Protocol)
+	 packets to determine the performance of a connection between devices.
+	.The syntax to do a simple ping is ::ping IP address or website URL
+
+.LAN(local area network) Networking
+	.Star topology:
+			     .The main premise of a star topology is that devices are individually connected
+				via a central networking device such as a switch or hub. This topology is the 
+				most commonly found today because of its reliability and scalability - despite the cost.
+			     .Any information sent to a device in this topology is sent via the central device to 
+				which it connects.
+	.Bus Topology:
+				.This type of connection relies upon a single connection which is known as a backbone cable.
+	.Ring Topology:
+				.The ring topology (also known as token topology) boasts some similarities. Devices such
+				 as computers are connected directly to each other to form a loop, meaning that there is 
+				 little cabling required and less dependence on dedicated hardware such as within a star topology. 
+				.A ring topology works by sending data across the loop until it reaches the destined device.
+				.using other devices along the loop to forward the data. Interestingly, a device will only
+				 send received data from another device in this topology if it does not have any to send itself.
+				 If the device happens to have data to send, it will send its own data first before sending
+				 data from another device.
+	.Switch:
+				.Switches are dedicated devices within a network that are designed to aggregate multiple other
+				 devices such as computers, printers, or any other networking-capable device using ethernet.
+				.These various devices plug into a switch's port. Switches are usually found in larger networks
+				 such as businesses, schools, or similar-sized networks, where there are many devices to connect
+				 to the network.
+				.Switches can connect a large number of devices by having ports of 4, 8, 16, 24, 32, and 64 for 
+				 devices to plug into.
+	.Router:
+				.It's a router's job to connect networks and pass data between them. It does this by using routing 
+				.Routing is the label given to the process of data travelling across networks. Routing involves 
+				 creating a path between networks so that this data can be successfully delivered.
+				.Routing is useful when devices are connected by many paths.
+	.Subnet:
+				.Subnetting is the term given to splitting up a network into smaller, miniature networks within itself.
+				.Subnets use IP addresses in three different ways:
+					Identify the network address
+					Identify the host address
+					Identify the default gateway
+				.Subnetting provides a range of benefits, including:
+					Efficiency
+					Security
+					Full control
+				.32 bits are in a subnet mask
+
+	.ARP(Address Resolution Protocol):
+				.ARP protocol allows a device to associate its MAC address with an IP address on the network.
+				.Each device on a network will keep a log of the MAC addresses associated with other devices.
+				.the technology that is responsible for allowing devices to identify themselves on a network.
+				.Each device within a network has a ledger to store information on, which is called a cache.
+				 In the context of the ARP protocol, this cache stores the identifiers of other devices on the network.
+				.In order to map these two identifiers together (IP address and MAC address), the ARP protocol sends two types of messages:
+					ARP Request
+					ARP Reply
+06/05/22
+
+	.DHCP (Dynamic Host Configuration Protocol):
+		.IP addresses can be assigned either manually, by entering them physically into a device, or automatically and most
+		 commonly by using a DHCP (Dynamic Host Configuration Protocol) server.
+		.dhcp Discover,dhcp Offer,Dhcp Request,Dhcp Ack
+ 
+DNS(domain name system):
+	.DNS (Domain Name System) provides a simple way for us to communicate with devices on the internet without remembering complex numbers.
+	 Much like every house has a unique address for sending mail directly to it, every computer on the internet has its own unique address 
+	 to communicate with it called an IP address.
+	.An IP address looks like the following 104.26.10.229, 4 sets of digits ranging from 0 - 255 separated by a period. When you want to 
+	 visit a website, it's not exactly convenient to remember this complicated set of numbers, and that's where DNS can help. So instead 
+	 of remembering 104.26.10.229, you can remember tryhackme.com instead.
+
+	.DNS record types:
+		.A record
+			These records resolve to IPv4 addresses, for example 104.26.10.229.
+		.AAAA Record
+			These records resolve to IPv6 addresses, for example 2606:4700:20::681a:be5
+		.CNAME Record,MX Record,TXT Record
+
